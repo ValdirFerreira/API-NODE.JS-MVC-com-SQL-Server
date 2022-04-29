@@ -16,7 +16,7 @@ module.exports =
         try {
             const produtos = await ModelProduto.create(
                 {
-                    Codigo: req.body.Codigo,
+                   //Codigo: req.body.Codigo, // Comentado para gerar automatico
                     Descricao: req.body.Descricao,
                     DataCriacao: req.body.DataCriacao,
                     DataAtualizacao: null
