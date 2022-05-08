@@ -3,6 +3,8 @@ const ModelProduto = require('../models/produto');
 module.exports =
 {
     async List(req, res) {
+         res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         try {
             const produtos = await ModelProduto.findAll();
             return res.json(produtos);
